@@ -14,7 +14,7 @@ pipeline {
 env
 pwd'''
         sh 'apt update'
-        sh 'apt install gcc make libpcap-dev --y'
+        sh 'apt -y install gcc make libpcap-dev'
         sh './configure'
       }
     }

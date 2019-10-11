@@ -5,6 +5,7 @@ pipeline {
       agent {
         docker {
           image 'ubuntu'
+          args '-u 0'
         }
 
       }
@@ -12,7 +13,7 @@ pipeline {
         sh '''id
 env
 pwd'''
-        sh 'sudo apk add gcc'
+        sh 'sudo apt install gcc'
         sh './configure'
       }
     }

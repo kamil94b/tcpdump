@@ -13,7 +13,7 @@ pipeline {
         sh '''id
 env
 pwd'''
-        sh 'sudo apt install gcc'
+        sh 'apt install gcc'
         sh './configure'
       }
     }

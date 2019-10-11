@@ -9,6 +9,8 @@ pipeline {
 
       }
       steps {
+        sh 'id'
+        sh 'apk add gcc'
         sh './configure'
       }
     }

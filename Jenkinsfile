@@ -14,7 +14,7 @@ pipeline {
 env
 pwd'''
         sh 'apt update'
-        sh 'apt install gcc'
+        sh 'apt install gcc openssl-dev make libpcap-dev'
         sh './configure'
       }
     }

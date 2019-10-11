@@ -9,8 +9,10 @@ pipeline {
 
       }
       steps {
-        sh 'id'
-        sh 'apk add gcc'
+        sh '''id
+env
+pwd'''
+        sh 'sudo apk add gcc'
         sh './configure'
       }
     }
